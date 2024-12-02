@@ -20,11 +20,11 @@ import {
 
 @Directive({ selector: '[ngxUiLoaderBlurred]' })
 export class NgxUiLoaderBlurredDirective implements OnInit, OnDestroy {
-  @Input() blur: number;
-  @Input() loaderId: string;
+  @Input() blur: number | undefined;
+  @Input() loaderId: string | undefined;
 
-  showForegroundWatcher: Subscription;
-  fastFadeOut: boolean;
+  showForegroundWatcher!: Subscription;
+  fastFadeOut: boolean | undefined;
 
   constructor(
     private elementRef: ElementRef,

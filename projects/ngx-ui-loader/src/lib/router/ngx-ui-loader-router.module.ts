@@ -53,7 +53,7 @@ export class NgxUiLoaderRouterModule {
       config = { ...config, ...customConfig };
     }
 
-    router.events.subscribe((event: RouterEvent) => {
+    router.events.subscribe((event: any) => {
       if (event instanceof NavigationStart) {
         if (!isIgnored(event.url, this.exclude.strs, this.exclude.regExps)) {
           if (config.showForeground) {

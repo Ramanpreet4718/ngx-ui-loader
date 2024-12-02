@@ -37,12 +37,12 @@ export class NgxUiLoaderComponent implements OnChanges, OnDestroy, OnInit {
   @Input() bgsOpacity: number;
   @Input() bgsPosition: PositionType;
   @Input() bgsSize: number;
-  @Input() bgsTemplate: TemplateRef<any>;
+  @Input() bgsTemplate!: TemplateRef<any>;
   @Input() bgsType: SpinnerType;
   @Input() fgsColor: string;
   @Input() fgsPosition: PositionType;
   @Input() fgsSize: number;
-  @Input() fgsTemplate: TemplateRef<any>;
+  @Input() fgsTemplate!: TemplateRef<any>;
   @Input() fgsType: SpinnerType;
   @Input() gap: number;
   @Input() loaderId: string;
@@ -60,24 +60,24 @@ export class NgxUiLoaderComponent implements OnChanges, OnDestroy, OnInit {
   @Input() textPosition: PositionType;
 
   fastFadeOut: boolean;
-  fgDivs: number[];
-  fgSpinnerClass: string;
-  bgDivs: number[];
-  bgSpinnerClass: string;
-  showForeground: boolean;
-  showBackground: boolean;
-  foregroundClosing: boolean;
-  backgroundClosing: boolean;
+  fgDivs!: number[];
+  fgSpinnerClass!: string;
+  bgDivs!: number[];
+  bgSpinnerClass!: string;
+  showForeground!: boolean;
+  showBackground!: boolean;
+  foregroundClosing!: boolean;
+  backgroundClosing!: boolean;
 
-  trustedLogoUrl: SafeResourceUrl;
-  logoTop: SafeStyle;
-  spinnerTop: SafeStyle;
-  textTop: SafeStyle;
+  trustedLogoUrl!: SafeResourceUrl;
+  logoTop!: SafeStyle;
+  spinnerTop!: SafeStyle;
+  textTop!: SafeStyle;
 
-  showForegroundWatcher: Subscription;
-  showBackgroundWatcher: Subscription;
-  foregroundClosingWatcher: Subscription;
-  backgroundClosingWatcher: Subscription;
+  showForegroundWatcher!: Subscription;
+  showBackgroundWatcher!: Subscription;
+  foregroundClosingWatcher!: Subscription;
+  backgroundClosingWatcher!: Subscription;
 
   defaultConfig: NgxUiLoaderConfig;
   initialized: boolean;
